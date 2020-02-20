@@ -24,6 +24,9 @@ release/
 .gradle/
 build/
 
+# Idea files
+.idea/
+
 # Local configuration file (sdk path, etc)
 local.properties
 
