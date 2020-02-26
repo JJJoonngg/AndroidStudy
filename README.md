@@ -12,3 +12,10 @@ Android Study 용 Git
 
      https://www.youtube.com/watch?v=RahBCY5BfS0
 
+---
+
+- YoutubeLoginProject : Firebase의 Authentication & FireStore 이용한 Login 기능 구현
+
+  - 참조
+
+    https://www.youtube.com/watch?v=pOCP4FSWMFY
