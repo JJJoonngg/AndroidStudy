@@ -19,3 +19,16 @@ Android Study 용 Git
   - 참조
 
     https://www.youtube.com/watch?v=pOCP4FSWMFY
+
+  - 스크린샷
+
+    <img src="https://user-images.githubusercontent.com/52276038/75353890-74e7d580-58ef-11ea-8735-464252c931a0.png" alt="1" width ="200" height ="300"/>           <img src="https://user-images.githubusercontent.com/52276038/75353895-774a2f80-58ef-11ea-9632-c0bd8bd16206.png" alt="2"  width ="200" height ="300"/> 
+
+    
+
+    <img src="https://user-images.githubusercontent.com/52276038/75353903-7a452000-58ef-11ea-9d14-08147b01bb31.png" alt="3"  width ="200" height ="300"/>           <img src="https://user-images.githubusercontent.com/52276038/75353925-80d39780-58ef-11ea-90ee-d6807922c652.png" alt="4"  width ="200" height ="300" /> 
+
+    
+
+---
+
