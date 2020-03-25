@@ -32,3 +32,13 @@ Android Study 용 Git
 
 ---
 
+- Bmi Calculator - 생존 코딩 5장 비만도 계산기
+
+  간단한 코틀린 예제 - anko library 사용
+
+  <img src ="https://user-images.githubusercontent.com/52276038/77513993-5575a580-6eb9-11ea-914e-4d7c941ca10a.png" width ="200" height ="300"> <img src = "https://user-images.githubusercontent.com/52276038/77514000-57d7ff80-6eb9-11ea-9a8c-30c4d2a75209.png" width = "200" height = "300">
+
+
+
+
+
