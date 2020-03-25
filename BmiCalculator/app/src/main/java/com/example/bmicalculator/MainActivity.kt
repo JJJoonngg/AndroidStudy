@@ -13,7 +13,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         resultButton.setOnClickListener{
-            startActivity<ResultActivity>()
+            startActivity<ResultActivity>(
+                "weight" to weightEditText.text.toString(),
+                "height" to heightEditText.text.toString()
+            )
         }
     }
 }
