@@ -30,6 +30,10 @@ class MainActivity : AppCompatActivity() {
         lapButton.setOnClickListener {
             recordLapTime()
         }
+
+        resetFab.setOnClickListener {
+            reset()
+        }
     }
 
     private fun start() {
@@ -58,6 +62,19 @@ class MainActivity : AppCompatActivity() {
 
         lapLayout.addView(textView, 0)
         lap++
+    }
+
+    private fun reset() {
+        timerTask?.cancel()
+
+        time = 0
+        isRunning = false
+        fab.setImageResource(R.drawable.ic_play_arrow_black_24dp)
+        secTextView.text = "0"
+        milliTextView.text = "00"
+
+        lapLayout.removeAllViews()
+        lap = 1
     }
 }
 
