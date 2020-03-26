@@ -40,5 +40,13 @@ Android Study 용 Git
 
 
 
+-------
 
+- Stop Watch - 생존 코딩 6장 스톱워치
+
+  Timer 기능과 동적으로 textview 를 추가해주어 stop watch 를 구현
+
+  <img src = "https://user-images.githubusercontent.com/52276038/77638655-db1d5200-6f9a-11ea-988d-db36b922068c.png" width = "200" height = "300"> <img src = "https://user-images.githubusercontent.com/52276038/77638660-dc4e7f00-6f9a-11ea-86f9-f1960373dffc.png" width = "200" height = "300">
+
+-------
 
