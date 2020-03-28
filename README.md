@@ -12,6 +12,14 @@ Android Study 용 Git
 
      https://www.youtube.com/watch?v=RahBCY5BfS0
 
+------
+
+- MyVolley : Volley를 이용한 간단한 영화 정보를 불러와서 Gson을 이용 parsing 하는 예제
+
+  - Boost Course 5 Example
+
+    https://www.edwith.org/boostcourse-android/lecture/17091/
+
 ---
 
 - YoutubeLoginProject : Firebase의 Authentication & FireStore 이용한 Login 기능 구현
