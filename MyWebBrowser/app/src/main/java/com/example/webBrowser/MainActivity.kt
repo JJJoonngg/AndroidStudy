@@ -1,8 +1,12 @@
 package com.example.webBrowser
 
+import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.inputmethod.EditorInfo
 import android.webkit.WebViewClient
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         webView.apply {
             settings.javaScriptEnabled = true
-            webChromeClient = WebViewClient()
+            webViewClient = WebViewClient()
         }
 
         webView.loadUrl("http://www.google.com")
@@ -37,5 +41,42 @@ class MainActivity : AppCompatActivity() {
         } else {
             super.onBackPressed()
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item?.itemId) {
+            R.id.action_google, R.id.action_home -> {
+                webView.loadUrl("http://www.google.com")
+                return true
+            }
+            R.id.action_naver -> {
+                webView.loadUrl("http://www.naver.com")
+                return true
+            }
+            R.id.action_daum -> {
+                webView.loadUrl("http://www.daum.net")
+                return true
+            }
+            R.id.action_call->{
+                val intent = Intent(Intent.ACTION_DIAL)
+                intent.data = Uri.parse("tel:031-123-4567")
+                if(intent.resolveActivity(packageManager)!=null){
+                    startActivity(intent)
+                }
+                return true
+            }
+            R.id.action_send_text->{
+                return true
+            }
+            R.id.action_email->{
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
