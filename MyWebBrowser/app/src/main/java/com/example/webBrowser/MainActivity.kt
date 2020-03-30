@@ -5,8 +5,10 @@ import android.content.SharedPreferences
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.webkit.WebViewClient
 import kotlinx.android.synthetic.main.activity_main.*
@@ -33,6 +35,8 @@ class MainActivity : AppCompatActivity() {
                 false
             }
         }
+
+        registerForContextMenu(webView)
     }
 
     override fun onBackPressed() {
@@ -62,21 +66,44 @@ class MainActivity : AppCompatActivity() {
                 webView.loadUrl("http://www.daum.net")
                 return true
             }
-            R.id.action_call->{
+            R.id.action_call -> {
                 val intent = Intent(Intent.ACTION_DIAL)
                 intent.data = Uri.parse("tel:031-123-4567")
-                if(intent.resolveActivity(packageManager)!=null){
+                if (intent.resolveActivity(packageManager) != null) {
                     startActivity(intent)
                 }
                 return true
             }
-            R.id.action_send_text->{
+            R.id.action_send_text -> {
                 return true
             }
-            R.id.action_email->{
+            R.id.action_email -> {
                 return true
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onCreateContextMenu(
+        menu: ContextMenu?,
+        v: View?,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        menuInflater.inflate(R.menu.context, menu)
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        when(item?.itemId){
+            R.id.action_share->{
+                //Page Share
+                return true
+            }
+            R.id.action_browser->{
+                //open at the basic web browser
+                return true
+            }
+        }
+        return super.onContextItemSelected(item)
     }
 }
