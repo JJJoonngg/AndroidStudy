@@ -58,3 +58,15 @@ Android Study 용 Git
 
 -------
 
+- My Web Browser - 생존 코딩 7장 나만의 웹 브라우저
+
+  간단한 browser 예제
+
+  'Anko library' 'implicit intent'
+
+  <img width ="200" height = "300" src = "https://user-images.githubusercontent.com/52276038/77891924-b67fed80-72ac-11ea-95ae-80641ca23d13.png"> <img width ="200" height = "300" src = "https://user-images.githubusercontent.com/52276038/77891935-b97ade00-72ac-11ea-937c-4c5b6c043643.png"> <img width ="200" height = "300" src = "https://user-images.githubusercontent.com/52276038/77891937-ba137480-72ac-11ea-8fba-9890c55e18d3.png"> 
+
+------
+
+
+
