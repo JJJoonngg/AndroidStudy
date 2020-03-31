@@ -1,6 +1,7 @@
 package com.example.tiltsensor
 
 import android.content.Context
+import android.content.pm.ActivityInfo
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -8,8 +9,11 @@ import android.hardware.SensorManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowManager
 
 class MainActivity : AppCompatActivity() , SensorEventListener{
+
+    private lateinit var tiltView: TiltView
 
     //Call if sensor accuracy changed
     override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
@@ -32,8 +36,13 @@ class MainActivity : AppCompatActivity() , SensorEventListener{
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        tiltView = TiltView(this)
+        setContentView(tiltView)
     }
 
     override fun onResume() {
