@@ -24,4 +24,9 @@ class MainActivity : AppCompatActivity() , SensorEventListener{
                 sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
                 SensorManager.SENSOR_DELAY_NORMAL)
     }
+
+    override fun onPause() {
+        super.onPause()
+        sensorManager.unregisterListener(this)
+    }
 }
