@@ -11,7 +11,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 
-class MainActivity : AppCompatActivity() , SensorEventListener{
+class MainActivity : AppCompatActivity(), SensorEventListener {
 
     private lateinit var tiltView: TiltView
 
@@ -26,8 +26,12 @@ class MainActivity : AppCompatActivity() , SensorEventListener{
         //values[0] : x value : up -10 ~ 0, down 0 ~ 10
         //values[1] : y value : left -10 ~ 0, right 0 ~ 10
         //values[2] : z not used
-        event?.let{
-            Log.d("MainActivity", "onSensorChanged: x: ${event.values[0]} , y: ${event.values[1]}, z: ${event.values[2]}")
+        event?.let {
+            Log.d(
+                "MainActivity",
+                "onSensorChanged: x: ${event.values[0]} , y: ${event.values[1]}, z: ${event.values[2]}"
+            )
+            tiltView.onSensorEvent(event)
         }
     }
 
@@ -47,9 +51,11 @@ class MainActivity : AppCompatActivity() , SensorEventListener{
 
     override fun onResume() {
         super.onResume()
-        sensorManager.registerListener(this,
-                sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
-                SensorManager.SENSOR_DELAY_NORMAL)
+        sensorManager.registerListener(
+            this,
+            sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+            SensorManager.SENSOR_DELAY_NORMAL
+        )
     }
 
     override fun onPause() {
