@@ -72,3 +72,13 @@ Android Study 용 Git
 
 ------
 
+- Tilt Sensor - 생존 코딩 8장 수평 측정기
+
+  Android 의 내장 Sensor를 이용한 수평 측정기
+
+  `Custom View` `Sensor Class` `Kotiln`
+
+  <img width="300" src="https://user-images.githubusercontent.com/52276038/78041368-8d925200-73ab-11ea-985c-ac0702d2f54a.png">
+
+------
+
