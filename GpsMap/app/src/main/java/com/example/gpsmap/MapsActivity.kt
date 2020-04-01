@@ -75,6 +75,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         })
     }
 
+    override fun onPause() {
+        super.onPause()
+        removeLocationListener()
+    }
+
+    private fun removeLocationListener(){
+        fusedLocationProviderClient.removeLocationUpdates(locationCallback)
+    }
+
     @SuppressLint("MissingPermission")
     private fun addLocationListener() {
         fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, null)
