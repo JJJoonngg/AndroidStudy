@@ -1,5 +1,6 @@
 package com.example.gpsmap
 
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,6 +19,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import org.jetbrains.anko.alert
 import org.jetbrains.anko.noButton
+import org.jetbrains.anko.toast
 import org.jetbrains.anko.yesButton
 import java.util.jar.Manifest
 
@@ -73,6 +75,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         })
     }
 
+    @SuppressLint("MissingPermission")
     private fun addLocationListener() {
         fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, null)
     }
@@ -110,5 +113,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
             noButton { }
         }.show()
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            REQUEST_ACCESS_FINE_LOCATION -> {
+                if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                    addLocationListener()
+                } else {
+                    toast("권한 거부 됨")
+                }
+                return
+            }
+        }
     }
 }
