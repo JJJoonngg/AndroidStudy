@@ -2,6 +2,8 @@
 # Created by https://www.gitignore.io/api/java,macos,gradle,android
 # Edit at https://www.gitignore.io/?templates=java,macos,gradle,android
 
+*.google_maps_api.xml
+
 ### Android ###
 # Built application files
 *.apk
