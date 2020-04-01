@@ -16,6 +16,9 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import org.jetbrains.anko.alert
+import org.jetbrains.anko.noButton
+import org.jetbrains.anko.yesButton
 import java.util.jar.Manifest
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -93,5 +96,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         } else {
             ok()
         }
+    }
+
+    private fun showPermissionInfoDialog() {
+        alert("현재 위치 정보를 얻으려면 위치 권한이 필요합니다", "권한이 필요한 이유") {
+            yesButton {
+                ActivityCompat.requestPermissions(this@MapsActivity, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
+                        REQUEST_ACCESS_FINE_LOCATION)
+            }
+            noButton {  }
+        }.show()
     }
 }
