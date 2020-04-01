@@ -66,7 +66,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onResume() {
         super.onResume()
-        addLocationListener()
+        permissionCheck(cancel = {
+            showPermissionInfoDialog()
+        }, ok = {
+            addLocationListener()
+        })
     }
 
     private fun addLocationListener() {
@@ -104,7 +108,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 ActivityCompat.requestPermissions(this@MapsActivity, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
                         REQUEST_ACCESS_FINE_LOCATION)
             }
-            noButton {  }
+            noButton { }
         }.show()
     }
 }
