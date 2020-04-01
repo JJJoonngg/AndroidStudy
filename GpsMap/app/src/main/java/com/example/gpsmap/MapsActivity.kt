@@ -2,6 +2,7 @@ package com.example.gpsmap
 
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,6 +19,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.PolylineOptions
 import org.jetbrains.anko.alert
 import org.jetbrains.anko.noButton
 import org.jetbrains.anko.toast
@@ -33,6 +35,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var locationCallback: MyLocationCallBack
 
     private val REQUEST_ACCESS_FINE_LOCATION = 1000
+
+    private val polygonOptions = PolylineOptions().width(5f).color(Color.RED)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -101,6 +105,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 17f))
 
                 Log.d("MapsActivity", "위도 : $latitude, 경도 : $longitude")
+
+                polygonOptions.add(latLng)
+                mMap.addPolyline(polygonOptions)
             }
         }
     }
