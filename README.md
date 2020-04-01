@@ -2,6 +2,8 @@ Android Study 용 Git
 
 `Android` `Java` `Kotlin`
 
+------
+
 - TestEmailSecond : Email로 인증번호 생성하여 보낸 뒤 Dialog 창을 이용하여 인증
 
   `Java` `Send Email` `Java Mail Api`
@@ -79,6 +81,16 @@ Android Study 용 Git
   `Custom View` `Sensor Class` `Kotiln`
 
   <img width="300" src="https://user-images.githubusercontent.com/52276038/78041368-8d925200-73ab-11ea-985c-ac0702d2f54a.png">
+
+------
+
+- Gps Map - 생존 코딩 9장 지도와 GPS
+
+  Google Map Activity를 이용한 지도 및 경로 그리기
+
+  `Anko library` `Google Maps Activity` `GPS` `Kotlin`
+
+  <img width="300" alt="1" src="https://user-images.githubusercontent.com/52276038/78133579-a35e5080-7459-11ea-9d3b-3dae568c5ed7.png">
 
 ------
 
