@@ -84,7 +84,21 @@ Android Study 용 Git
 
 ------
 
-- Gps Map - 생존 코딩 9장 지도와 GPS
+- My Gallery - 생존 코딩 9장 전자액자
+
+  기기에 저장된 사진을 차례대로 보여줌. 3초마다 자동으로 슬라이드
+
+  `Content Provider` `Fragment` `ViewPager` `FragmentStatePagerAdapter` `timer`
+
+  `Anko` `Glide`
+
+  <img width = "300" src ="https://user-images.githubusercontent.com/52276038/78752170-8cb27f00-79ae-11ea-8aab-afe93853e58f.gif">
+
+  
+
+------
+
+- Gps Map - 생존 코딩 10장 지도와 GPS
 
   Google Map Activity를 이용한 지도 및 경로 그리기
 
