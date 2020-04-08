@@ -33,12 +33,12 @@ class PhotoFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(uri: String) {
+        fun newInstance(uri: String) =
             PhotoFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_URI, uri)
                 }
             }
-        }
+
     }
 }
