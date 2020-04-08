@@ -4,6 +4,7 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import org.jetbrains.anko.alert
@@ -11,6 +12,7 @@ import org.jetbrains.anko.noButton
 import org.jetbrains.anko.toast
 import org.jetbrains.anko.yesButton
 import java.util.jar.Manifest
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
@@ -53,6 +55,14 @@ class MainActivity : AppCompatActivity() {
                 null,
                 null,
                 MediaStore.Images.ImageColumns.DATE_TAKEN + " DESC")
+
+        if(cursor!=null){
+            while (cursor.moveToNext()){
+                val uri = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA))
+                Log.d("MainActivity", uri)
+            }
+            cursor.close()
+        }
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
