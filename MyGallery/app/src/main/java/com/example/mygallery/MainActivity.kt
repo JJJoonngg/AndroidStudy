@@ -8,6 +8,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import org.jetbrains.anko.alert
 import org.jetbrains.anko.noButton
+import org.jetbrains.anko.toast
 import org.jetbrains.anko.yesButton
 import java.util.jar.Manifest
 
@@ -39,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                         arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
                         REQUEST_READ_EXTERNAL_STORAGE)
             }
-        }else{
+        } else {
             //권한이 이미 허용됨
             getAllPhotos()
         }
@@ -52,5 +53,22 @@ class MainActivity : AppCompatActivity() {
                 null,
                 null,
                 MediaStore.Images.ImageColumns.DATE_TAKEN + " DESC")
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            REQUEST_READ_EXTERNAL_STORAGE -> {
+                if ((grantResults.isNotEmpty()
+                                && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                    //권한 허용됨
+                    getAllPhotos()
+                } else {
+                    //권한 거부
+                    toast("권한 거부 됨")
+                }
+                return
+            }
+        }
     }
 }
