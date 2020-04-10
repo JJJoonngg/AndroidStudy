@@ -92,7 +92,7 @@ Android Study 용 Git
 
   `Anko` `Glide`
 
-  <img width = "300" src ="https://user-images.githubusercontent.com/52276038/78752170-8cb27f00-79ae-11ea-8aab-afe93853e58f.gif">
+  <img width = "120" height = "200" src ="https://user-images.githubusercontent.com/52276038/78752170-8cb27f00-79ae-11ea-8aab-afe93853e58f.gif">
 
   
 
@@ -108,3 +108,12 @@ Android Study 용 Git
 
 ------
 
+- Flashlight - 생존 코딩 11장 손전등
+
+  앱과 위젯을 통한 플래시를 켜고 끄는 앱
+
+  `CameraManager` `Service` `App Widget` `Anko library`
+
+  <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/78994756-d13f4580-7b7b-11ea-9e5d-e82769dbedb2.png">  <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/78994762-d3090900-7b7b-11ea-9853-7fd0549233d3.png">  <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/78994765-d43a3600-7b7b-11ea-8a9d-62b0b007bec8.png">
+
+------
