@@ -13,20 +13,28 @@ class Torch(context: Context) {
     }
 
     fun flashOn() {
-        cameraManager.setTorchMode(cameraId, true)
+        cameraId?.let {
+            cameraManager.setTorchMode(it, true)
+        }
     }
 
     fun flashOff() {
-        cameraManager.setTorchMode(cameraId, false)
+        cameraId?.let {
+            cameraManager.setTorchMode(it, false)
+        }
     }
 
     private fun getCameraId(): String? {
         var cameraIds = cameraManager.cameraIdList
         for (id in cameraIds) {
             val info = cameraManager.getCameraCharacteristics(id)
-            val flashAvailable = info.get(CameraCharacteristics.FLASH_INFO_AVAILABLE)
-            val lensFacing = info.get(CameraCharacteristics.LENS_FACING)
-            if (flashAvailable != null && flashAvailable && lensFacing != null && lensFacing == CameraCharacteristics.LENS_FACING_BACK) {
+            val flashAvailable = info.get(CameraCharacteristics.FLASH_INFO_AVAILABLE) // 플래시 가능 여부
+            val lensFacing = info.get(CameraCharacteristics.LENS_FACING) //카메라 렌즈 방향
+            if (flashAvailable != null
+                && flashAvailable
+                && lensFacing != null
+                && lensFacing == CameraCharacteristics.LENS_FACING_BACK
+            ) {
                 return id
             }
         }
