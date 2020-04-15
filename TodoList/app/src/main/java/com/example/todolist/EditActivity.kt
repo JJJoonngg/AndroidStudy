@@ -1,9 +1,10 @@
 package com.example.todolist
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import io.realm.Realm
+import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_edit.*
 import org.jetbrains.anko.alert
@@ -24,7 +25,7 @@ class EditActivity : AppCompatActivity() {
         if (id == -1L) {
             insetMode()
         } else {
-            updateMode()
+            updateMode(id)
         }
 
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
@@ -63,7 +64,7 @@ class EditActivity : AppCompatActivity() {
     private fun insertTodo() {
         realm.beginTransaction() // Transaction Start
 
-        val newItem = realm.createObject<Todo>(nextId()) // 새 객체 생성
+        val newItem = realm.createObject<Todo>(nextId())// 새 객체 생성
 
         // 값 설정
         newItem.title = todoEditText.text.toString()
@@ -111,7 +112,7 @@ class EditActivity : AppCompatActivity() {
         deleteItem.deleteFromRealm() //삭제
         realm.commitTransaction()   //트랜잭션 종료반영
 
-        alert("내용이 삭제되었습니다."){
+        alert("내용이 삭제되었습니다.") {
             yesButton { finish() }
         }.show()
 
