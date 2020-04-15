@@ -66,4 +66,19 @@ class EditActivity : AppCompatActivity() {
         }.show()
 
     }
+
+    private fun deleteTodo(id: Long){
+        realm.beginTransaction()    // 트랜잭션 시작
+
+        val deleteItem = realm.where<Todo>().equalTo("id", id).findFirst()!! // 삭제할 객체
+
+        deleteItem.deleteFromRealm() //삭제
+        realm.commitTransaction()   //트랜잭션 종료반영
+
+        alert("내용이 삭제되었습니다."){
+            yesButton { finish() }
+        }.show()
+
+
+    }
 }
