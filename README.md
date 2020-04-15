@@ -1,4 +1,4 @@
-Android Study 용 Git
+# **Android Study 용 Git**
 
 `Android` `Java` `Kotlin`
 
@@ -48,7 +48,9 @@ Android Study 용 Git
 
   `Kotlin` `Anko library`
   
-  <img src ="https://user-images.githubusercontent.com/52276038/77513993-5575a580-6eb9-11ea-914e-4d7c941ca10a.png" width ="120" height ="200"> <img src = "https://user-images.githubusercontent.com/52276038/77514000-57d7ff80-6eb9-11ea-9a8c-30c4d2a75209.png" width ="120" height ="200">
+  - 스크린샷
+  
+    <img src ="https://user-images.githubusercontent.com/52276038/77513993-5575a580-6eb9-11ea-914e-4d7c941ca10a.png" width ="120" height ="200"> <img src = "https://user-images.githubusercontent.com/52276038/77514000-57d7ff80-6eb9-11ea-9a8c-30c4d2a75209.png" width ="120" height ="200">
 
 
 
@@ -60,7 +62,9 @@ Android Study 용 Git
 
   `Timer` `Kotlin`
   
-  <img src = "https://user-images.githubusercontent.com/52276038/77638655-db1d5200-6f9a-11ea-988d-db36b922068c.png" width ="120" height ="200"> <img src = "https://user-images.githubusercontent.com/52276038/77638660-dc4e7f00-6f9a-11ea-86f9-f1960373dffc.png" width ="120" height ="200">
+  - 스크린샷
+  
+    <img src = "https://user-images.githubusercontent.com/52276038/77638655-db1d5200-6f9a-11ea-988d-db36b922068c.png" width ="120" height ="200"> <img src = "https://user-images.githubusercontent.com/52276038/77638660-dc4e7f00-6f9a-11ea-86f9-f1960373dffc.png" width ="120" height ="200">
 
 -------
 
@@ -70,7 +74,9 @@ Android Study 용 Git
 
   `Anko library` `implicit intent` `Kotlin`
 
-  <img wwidth ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/77891924-b67fed80-72ac-11ea-95ae-80641ca23d13.png"> <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/77891935-b97ade00-72ac-11ea-937c-4c5b6c043643.png"> <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/77891937-ba137480-72ac-11ea-8fba-9890c55e18d3.png"> 
+  - 스크린샷
+  
+    <img wwidth ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/77891924-b67fed80-72ac-11ea-95ae-80641ca23d13.png"> <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/77891935-b97ade00-72ac-11ea-937c-4c5b6c043643.png"> <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/77891937-ba137480-72ac-11ea-8fba-9890c55e18d3.png"> 
 
 ------
 
@@ -80,7 +86,9 @@ Android Study 용 Git
 
   `Custom View` `Sensor Class` `Kotiln`
 
-  <img width="300" src="https://user-images.githubusercontent.com/52276038/78041368-8d925200-73ab-11ea-985c-ac0702d2f54a.png">
+  - 스크린샷
+  
+    <img width="300" src="https://user-images.githubusercontent.com/52276038/78041368-8d925200-73ab-11ea-985c-ac0702d2f54a.png">
 
 ------
 
@@ -92,8 +100,10 @@ Android Study 용 Git
 
   `Anko` `Glide`
 
-  <img width = "120" height = "200" src ="https://user-images.githubusercontent.com/52276038/78752170-8cb27f00-79ae-11ea-8aab-afe93853e58f.gif">
+  - 스크린샷
 
+    <img width = "120" height = "200" src ="https://user-images.githubusercontent.com/52276038/78752170-8cb27f00-79ae-11ea-8aab-afe93853e58f.gif">
+  
   
 
 ------
@@ -104,7 +114,9 @@ Android Study 용 Git
 
   `Anko library` `Google Maps Activity` `GPS` `Kotlin`
 
-  <img width="300" alt="1" src="https://user-images.githubusercontent.com/52276038/78133579-a35e5080-7459-11ea-9d3b-3dae568c5ed7.png">
+  - 스크린샷 
+  
+    <img width="300" alt="1" src="https://user-images.githubusercontent.com/52276038/78133579-a35e5080-7459-11ea-9d3b-3dae568c5ed7.png">
 
 ------
 
@@ -114,7 +126,9 @@ Android Study 용 Git
 
   `CameraManager` `Service` `App Widget` `Anko library`
 
-  <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/78994756-d13f4580-7b7b-11ea-9e5d-e82769dbedb2.png">  <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/78994762-d3090900-7b7b-11ea-9853-7fd0549233d3.png">  <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/78994765-d43a3600-7b7b-11ea-8a9d-62b0b007bec8.png">
+  - 스크린샷
+
+    <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/78994756-d13f4580-7b7b-11ea-9e5d-e82769dbedb2.png">  <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/78994762-d3090900-7b7b-11ea-9853-7fd0549233d3.png">  <img width ="120" height ="200" src = "https://user-images.githubusercontent.com/52276038/78994765-d43a3600-7b7b-11ea-8a9d-62b0b007bec8.png">
 
 ------
 
@@ -124,7 +138,23 @@ Android Study 용 Git
 
   `SoundPool`
 
-  <img width ="200" height ="120" src = "https://user-images.githubusercontent.com/52276038/79105827-5f017780-7dac-11ea-8cd0-10dbe6cf8324.png">  
+  - 스크린샷
+
+    <img width ="200" height ="120" src = "https://user-images.githubusercontent.com/52276038/79105827-5f017780-7dac-11ea-8cd0-10dbe6cf8324.png">  
 
 ------
+
+- Todo List - 생존코딩 13장 Todo 리스트
+
+  할 일 목록을 표시하고, 데이터 베이스에 추가 , 수정, 삭제하는 간단한 예제
+
+  `ListView` `Realm` `Anko`
+
+  - 스크린샷
+
+    <img width = "120" height="200" src="https://user-images.githubusercontent.com/52276038/79345002-83578280-7f6b-11ea-9961-0266e96a9b15.png"> <img width = "120" height="200" src="https://user-images.githubusercontent.com/52276038/79345020-88b4cd00-7f6b-11ea-9493-605114ced0be.png"> <img width = "120" height="200" src="https://user-images.githubusercontent.com/52276038/79345028-8a7e9080-7f6b-11ea-9ccb-e3cd46a7787c.png"> <img width = "120" height="200" src="https://user-images.githubusercontent.com/52276038/79345031-8b172700-7f6b-11ea-94ad-9e6db4d9cb08.png" > <img width = "120" height="200" src="https://user-images.githubusercontent.com/52276038/79345034-8c485400-7f6b-11ea-93a0-0183253eee99.png">
+
+------
+
+
 
