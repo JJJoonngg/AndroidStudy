@@ -49,4 +49,21 @@ class EditActivity : AppCompatActivity() {
         }
         return 0
     }
+
+    private fun updateTodo(id: Long){
+        realm.beginTransaction()    // 트랜잭션 시작
+
+        val updateItem = realm.where<Todo>().equalTo("id", id).findFirst()!!
+        // 값 수정
+        updateItem.title = todoEditText.text.toString()
+        updateItem.date = calendar.timeInMillis
+
+        realm.commitTransaction()   //트랜잭션 종료반영
+
+        // 다이얼로그 표시
+        alert("내용이 변경되었습니다."){
+            yesButton { finish() }
+        }.show()
+
+    }
 }
