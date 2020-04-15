@@ -3,6 +3,7 @@
     package="com.example.todolist">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,7 +12,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".EditActivity"></activity>
         <activity
-            android:name=".MyApplication"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
