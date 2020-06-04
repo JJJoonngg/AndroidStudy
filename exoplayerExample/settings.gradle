@@ -1,0 +1,2 @@
+rootProject.name='exoplayer Example'
+include ':app'
