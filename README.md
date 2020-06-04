@@ -156,5 +156,17 @@
 
 ------
 
+- ExoPlayerExample - exoplayer의 simple player 예제
+
+  - 참조 - https://sunpil.tistory.com/104
+
+  `ExoPlayer` `SimpleExoPlayerView`
+
+  - 작동 화면
+
+    <img width = "120" height="200" src="https://user-images.githubusercontent.com/52276038/83728098-039f8780-a681-11ea-9ad7-e29112ecb6c7.gif">
+
+------
+
 
 
