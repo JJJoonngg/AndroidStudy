@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -8,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.jjjoonngg.exoplayerexample"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -28,6 +29,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    dataBinding {
+        enabled = true
+    }
+
 }
 
 dependencies {
@@ -40,9 +45,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation 'com.google.android.exoplayer:exoplayer-core:2.11.4'
-    implementation 'com.google.android.exoplayer:exoplayer-dash:2.11.4'
-    implementation 'com.google.android.exoplayer:exoplayer-ui:2.11.4'
+    // exo player
+    implementation "com.google.android.exoplayer:exoplayer:2.12.1"//
+    implementation "com.google.android.exoplayer:exoplayer-core:2.12.1" //
+    implementation "com.google.android.exoplayer:exoplayer-ui:2.12.1" //
+    implementation "com.google.android.exoplayer:exoplayer-hls:2.12.1" //
+    implementation "com.google.android.exoplayer:exoplayer-dash:2.12.1" //
 
     implementation "org.jetbrains.anko:anko:$anko_version"
 }
