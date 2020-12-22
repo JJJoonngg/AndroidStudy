@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ui_background_radius">24dp</dimen>
+    <dimen name="ui_background_normal">150dp</dimen>
+    <dimen name="ui_background_expand">300dp</dimen>
+
+
+    <dimen name="ui_background_white_bar_width">50dp</dimen>
+    <dimen name="ui_background_white_bar_height">5dp</dimen>
+    <dimen name="ui_background_white_bar_margin_top">10dp</dimen>
+</resources>

@@ -6,13 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:id="@+id/swipeUp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_background_normal"
+        android:background="@drawable/ui_background"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/whiteBar"
+        android:layout_width="@dimen/ui_background_white_bar_width"
+        android:layout_height="@dimen/ui_background_white_bar_height"
+        android:layout_marginTop="@dimen/ui_background_white_bar_margin_top"
+        android:background="@drawable/ui_background_white_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/swipeUp"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
