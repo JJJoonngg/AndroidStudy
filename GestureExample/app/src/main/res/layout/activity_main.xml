@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/swipeUp"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/ui_background_normal"
+        android:layout_height="@dimen/ui_background_expand"
         android:background="@drawable/ui_background"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="ContentDescription" />

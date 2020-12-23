@@ -6,10 +6,14 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var swipeUp: ImageView
+    private var isExpand = true
+
+    private var expandSize = 0.0f
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         swipeUp = findViewById<ImageView>(R.id.swipeUp)
+        expandSize = (300 * resources.displayMetrics.density).roundToInt().toFloat()
 
 
         val gestureDetector = GestureDetector(this, object : GestureDetector.OnGestureListener {
@@ -37,11 +42,6 @@ class MainActivity : AppCompatActivity() {
                 p2: Float,
                 p3: Float
             ): Boolean {
-                if (p0?.y?.toInt()!! > p1?.y?.toInt()!!) {
-                    //TODO : EXPAND
-                } else {
-                    swipeUp.collapse()
-                }
                 return true
             }
 
@@ -54,12 +54,22 @@ class MainActivity : AppCompatActivity() {
                 p2: Float,
                 p3: Float
             ): Boolean {
-
+                if (p0?.y?.toInt()!! > p1?.y?.toInt()!!) {
+                    if (!isExpand) {
+                        swipeUp.expand(expandSize)
+                        isExpand = true
+                    }
+                } else {
+                    if (isExpand) {
+                        swipeUp.collapse(expandSize)
+                        isExpand = false
+                    }
+                }
                 return true
             }
         })
 
-        swipeUp.setOnTouchListener { view, motionEvent ->
+        swipeUp.setOnTouchListener { _, motionEvent ->
             return@setOnTouchListener gestureDetector.onTouchEvent(motionEvent)
         }
 
