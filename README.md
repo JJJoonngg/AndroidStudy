@@ -164,9 +164,17 @@
 
   - 작동 화면
 
-    <img width = "120" height="200" src="https://user-images.githubusercontent.com/52276038/83728098-039f8780-a681-11ea-9ad7-e29112ecb6c7.gif">
+    <img width = "150" src="https://user-images.githubusercontent.com/52276038/83728098-039f8780-a681-11ea-9ad7-e29112ecb6c7.gif">
 
 ------
 
+- [GestureExample](https://github.com/JJJoonngg/AndroidStudy/tree/master/GestureExample) - Gesture 를 이용하여 Swip up, down 애니메이션을 구현
 
+  `GestureDector` `OnGestureListener` `ValueAnimator`
+
+  - 작동 화면
+
+    <img width = "150" src="https://user-images.githubusercontent.com/52276038/103007946-a533eb00-4577-11eb-80f7-43cf8014e2d3.gif">
+
+---
 
