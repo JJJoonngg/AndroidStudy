@@ -24,6 +24,7 @@ import com.example.android.hilt.data.LoggerLocalDataSource
 import com.example.android.hilt.navigator.AppNavigator
 import com.example.android.hilt.navigator.AppNavigatorImpl
 import com.example.android.hilt.util.DateFormatter
+import javax.inject.Singleton
 
 class ServiceLocator(applicationContext: Context) {
 
