@@ -12,3 +12,5 @@
 
 ### [3.ETC (기타 코드들)](https://github.com/JJJoonngg/AndroidStudy/tree/master/ETC)
 
+### [4.About-kotlin (코틀린 정리노트)](https://github.com/JJJoonngg/AndroidStudy/tree/master/About-Kotlin)
+
