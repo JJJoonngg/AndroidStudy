@@ -16,13 +16,16 @@
 
 package com.example.android.advancedcoroutines
 
+import androidx.annotation.AnyThread
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.map
+import androidx.lifecycle.switchMap
 import com.example.android.advancedcoroutines.util.CacheOnSuccess
 import com.example.android.advancedcoroutines.utils.ComparablePair
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 /**
  * Repository module for handling data operations.
@@ -64,13 +67,20 @@ class PlantRepository private constructor(
         }
     }
 
-    fun getPlantsWithGrowZone(growZone: GrowZone): LiveData<List<Plant>> = liveData {
-        val plantsGrowZoneLiveData = plantDao.getPlantsWithGrowZoneNumber(growZone.number)
-        val customSortOrder = plantListSortOrderCache.getOrAwait()
-        emitSource(plantsGrowZoneLiveData.map { plantList ->
-            plantList.applySort(customSortOrder)
-        })
-    }
+    fun getPlantsWithGrowZone(growZone: GrowZone): LiveData<List<Plant>> =
+        plantDao.getPlantsWithGrowZoneNumber(growZone.number)
+            .switchMap { plantList ->
+                liveData {
+                    val customSortOrder = plantListSortOrderCache.getOrAwait()
+                    emit(plantList.applyMainSafeSort(customSortOrder))
+                }
+            }
+
+    @AnyThread
+    suspend fun List<Plant>.applyMainSafeSort(customSortOrder: List<String>) =
+        withContext(defaultDispatcher) {
+            this@applyMainSafeSort.applySort(customSortOrder)
+        }
 
     /**
      * Returns true if we should make a network request.
