@@ -25,6 +25,8 @@ import com.example.android.advancedcoroutines.util.CacheOnSuccess
 import com.example.android.advancedcoroutines.utils.ComparablePair
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.withContext
 
 /**
@@ -81,6 +83,25 @@ class PlantRepository private constructor(
         withContext(defaultDispatcher) {
             this@applyMainSafeSort.applySort(customSortOrder)
         }
+
+    private val customSortFlow = plantListSortOrderCache::getOrAwait.asFlow()
+
+    val plantsFlow: Flow<List<Plant>>
+        get() = plantDao.getPlantsFlow()
+            .combine(customSortFlow) { plants, sortOrder ->
+                plants.applySort(sortOrder)
+            }
+            .flowOn(defaultDispatcher)
+            .conflate()
+
+    fun getPlantsWithGrowZoneFlow(growZoneNumber: GrowZone): Flow<List<Plant>> {
+        return plantDao.getPlantsWithGrowZoneNumberFlow(growZoneNumber.number)
+            .map { plantList ->
+                val sortOrderFromNetwork = plantListSortOrderCache.getOrAwait()
+                val nextValue = plantList.applyMainSafeSort(sortOrderFromNetwork)
+                nextValue
+            }
+    }
 
     /**
      * Returns true if we should make a network request.
